@@ -1,0 +1,29 @@
+import type { Config } from 'tailwindcss'
+
+export default <Partial<Config>>{
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['e-Ukraine'],
+        serif: ['e-Ukraine'],
+        mono: ['e-Ukraine'],
+        head: ['e-UkraineHead']
+      },
+      colors: {
+        'coral-reef': {
+          '50': '#f9f7f3',
+          '100': '#f1ede3',
+          '200': '#e1d9c7',
+          '300': '#caba9c',
+          '400': '#b9a17e',
+          '500': '#ab8b64',
+          '600': '#9e7a58',
+          '700': '#83634b',
+          '800': '#6b5141',
+          '900': '#584436',
+          '950': '#2e231c',
+        }
+      }
+    }
+  }
+}

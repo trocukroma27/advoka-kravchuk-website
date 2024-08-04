@@ -1,0 +1,40 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-07-30',
+  devtools: { enabled: true },
+  modules: ['@nuxthub/core', '@nuxt/ui', '@nuxt/fonts', '@nuxtjs/i18n', '@nuxt/eslint'],
+  typescript: {
+    typeCheck: true
+  },
+  i18n: {
+    defaultLocale: 'uk',
+    langDir: 'lang',
+    locales: [
+      {
+        code: 'uk',
+        file: 'uk-UA.json'
+      },
+      {
+        code: 'en',
+        file: 'en-US.json'
+      }
+    ]
+  },
+  colorMode: {
+    preference: 'system'
+  },
+  hub: {
+    database: true,
+    blob: true,
+  },
+  fonts: {
+    families: [
+      { name: 'e-Ukraine', src: '/fonts/e-Ukraine-UltraLight.otf', weight: '100', global: true, fallbacks: ['Roboto'], preload: true },
+      { name: 'e-Ukraine', src: '/fonts/e-Ukraine-Light.otf', weight: '300', global: true, fallbacks: ['Roboto'], preload: true },
+      { name: 'e-Ukraine', src: '/fonts/e-Ukraine-Regular.otf', weight: '400', global: true, fallbacks: ['Roboto'], preload: true },
+      { name: 'e-Ukraine', src: '/fonts/e-Ukraine-Medium.otf', weight: '500', global: true, fallbacks: ['Roboto'], preload: true },
+      { name: 'e-UkraineHead', src: '/fonts/e-UkraineHead-Light.otf', weight: '300', global: true, fallbacks: ['Roboto'], preload: true },
+      { name: 'e-UkraineHead', src: '/fonts/e-UkraineHead-Regular.otf', weight: '400', global: true, fallbacks: ['Roboto'], preload: true }
+    ]
+  }
+})
