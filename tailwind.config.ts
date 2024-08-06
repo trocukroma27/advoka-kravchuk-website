@@ -4,10 +4,10 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       fontFamily: {
-        sans: ['e-Ukraine'],
-        serif: ['e-Ukraine'],
-        mono: ['e-Ukraine'],
-        head: ['e-UkraineHead']
+        sans: ['e-Ukraine', 'Roboto'],
+        serif: ['e-Ukraine', 'Roboto'],
+        mono: ['e-Ukraine', 'Roboto'],
+        head: ['e-UkraineHead', 'Roboto']
       },
       colors: {
         'coral-reef': {

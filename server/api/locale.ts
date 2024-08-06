@@ -1,5 +1,6 @@
-export default defineEventHandler(async event => {
+export default defineEventHandler(async () => {
+  const content = '# **Hello** _world_ \n > This is quote';
   return {
-    hello: event.context.lang
+    hello: content
   }
 })

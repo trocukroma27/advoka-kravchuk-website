@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+definePageMeta({
+  title: 'blog'
+});
 </script>
 
 <template>

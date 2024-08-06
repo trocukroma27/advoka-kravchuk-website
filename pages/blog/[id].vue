@@ -1,6 +1,9 @@
 <script setup lang="ts">
-  const route = useRoute();
-  const id = route.params.id;
+const route = useRoute();
+definePageMeta({
+  title: 'blog'
+});
+const id = route.params.id;
 </script>
 
 <template>

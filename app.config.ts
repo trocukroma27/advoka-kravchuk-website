@@ -8,6 +8,9 @@ export default defineAppConfig({
         gray: {
           ghost: 'hover:bg-gray-200'
         }
+      },
+      variant: {
+        ghost: 'hover:bg-{color}-100'
       }
     },
     horizontalNavigation: {

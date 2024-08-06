@@ -1,13 +1,17 @@
 {
+  "title": "Lawyer Oleksandr Kravchuk",
+  "description": "Professional lawyer with experience in commercial, family, criminal, civil, and administrative cases. We also offer subscription-based legal services for businesses, institutions, organizations, and local government. We guarantee high-quality services and an individual approach to each client.",
   "error": "Error occured",
   "error_404": "Page not found",
   "lawyer": "Lawyer",
   "oleksandr_kravchuk": "Oleksandr Kravchuk",
-  "phone": "+380685257555",
-  "phone_formatted": "+38 (068) 525-75-55",
   "home": "Home",
   "practices": "Practices",
-  "publications": "Publications",
+  "blog": "Blog",
   "contacts": "Contacts",
-  "documents": "Sample documents"
+  "documents": "Sample documents",
+  "phone": "+380685257555",
+  "phone_formatted": "+38 (068) 525-75-55",
+  "telegram": "khristiina_kravchuk",
+  "information": "Information"
 }
