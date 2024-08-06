@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
-    "@nuxtjs/mdc"
+    "@nuxtjs/mdc",
+    "@nuxtjs/sitemap"
   ],
   typescript: {
     typeCheck: true
