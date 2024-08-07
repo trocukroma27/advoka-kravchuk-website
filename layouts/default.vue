@@ -1,11 +1,26 @@
 <script lang="ts" setup>
 const route = useRoute();
 const { t } = useI18n();
+
 const head = useLocaleHead({
   identifierAttribute: 'id',
   addSeoAttributes: true
 });
+
 const title = computed(() => t(route.meta.title as string | undefined ?? 'title'));
+const siteName = computed(() => t('title'));
+
+useHead({
+	script: [{
+		type: 'application/ld-json',
+		children: JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": siteName,
+			"url": process.env.BASE_URL
+		}),
+	}]
+})
 </script>
 
 <template>
