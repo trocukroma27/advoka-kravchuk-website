@@ -8,19 +8,22 @@ const head = useLocaleHead({
 });
 
 const title = computed(() => t(route.meta.title as string | undefined ?? 'title'));
-const siteName = computed(() => t('title'));
 
-useHead({
+const jsonLd = computed(() => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": `https://advokat-kravchuk.nuxt.dev`,
+    "name": 'Адвокат Олександр Кравчук',
+    "alternateName": "Lawyer Oleksandr Kravchuk"
+  };
+});
+useHead(() => ({
 	script: [{
 		type: 'application/ld-json',
-		children: JSON.stringify({
-			"@context": "https://schema.org",
-			"@type": "WebSite",
-			"name": siteName,
-			"url": process.env.BASE_URL
-		}),
+		textContent: JSON.stringify(jsonLd.value),
 	}]
-})
+}));
 </script>
 
 <template>
@@ -37,7 +40,7 @@ useHead({
         <Meta property="og:description" :content="$t('description')" />
         <Meta property="og:type" content="website" />
         <template v-for="meta in head.meta" :key="meta.id">
-          <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
+			    <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
         </template>
       </Head>
       <Body class="relative">
