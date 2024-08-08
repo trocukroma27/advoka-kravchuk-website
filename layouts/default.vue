@@ -39,6 +39,8 @@ useHead(() => ({
         <Meta property="og:site_name" :content="$t('title')" />
         <Meta property="og:description" :content="$t('description')" />
         <Meta property="og:type" content="website" />
+        <!-- TODO: Забрати цей мета тег після того як сайт буде готовий до публікації -->
+        <Meta name="robots" content="noindex" />
         <template v-for="meta in head.meta" :key="meta.id">
 			    <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
         </template>
