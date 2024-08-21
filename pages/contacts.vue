@@ -1,11 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'contacts'
+  title: "contacts",
 });
 </script>
 
 <template>
-	<div>
-    Контакти
-  </div>
+  <div>Контакти</div>
 </template>

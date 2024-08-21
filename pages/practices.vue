@@ -1,11 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'practices'
-})
+  title: "practices",
+});
 </script>
 
 <template>
-	<div>
-    Практики
-  </div>
+  <div>Практики</div>
 </template>

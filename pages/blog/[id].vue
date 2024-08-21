@@ -1,13 +1,11 @@
 <script setup lang="ts">
 const route = useRoute();
 definePageMeta({
-  title: 'blog'
+  title: "blog",
 });
 const id = route.params.id;
 </script>
 
 <template>
-	<div>
-    Стаття {{ id }}
-  </div>
+  <div>Стаття {{ id }}</div>
 </template>

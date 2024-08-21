@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const { setLocale, locales, locale } = useI18n()
+const { setLocale, locales, locale } = useI18n();
 
 const anotherLocale = computed(() => {
-  return locales.value.find(i => i.code !== locale.value)
-})
+  return locales.value.find((i) => i.code !== locale.value);
+});
 </script>
 
 <template>
