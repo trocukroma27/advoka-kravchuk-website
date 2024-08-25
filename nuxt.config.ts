@@ -64,18 +64,6 @@ export default defineNuxtConfig({
         weight: "500",
         global: true,
       },
-      {
-        name: "e-UkraineHead",
-        src: "/fonts/e-UkraineHead-Light.otf",
-        weight: "300",
-        global: true,
-      },
-      {
-        name: "e-UkraineHead",
-        src: "/fonts/e-UkraineHead-Regular.otf",
-        weight: "400",
-        global: true,
-      },
     ],
   },
 });

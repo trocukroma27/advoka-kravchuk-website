@@ -7,7 +7,6 @@ export default <Partial<Config>>{
         sans: ["e-Ukraine", "Roboto"],
         serif: ["e-Ukraine", "Roboto"],
         mono: ["e-Ukraine", "Roboto"],
-        head: ["e-UkraineHead", "Roboto"],
       },
       colors: {
         "coral-reef": {

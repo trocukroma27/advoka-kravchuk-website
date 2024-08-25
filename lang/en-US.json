@@ -1,7 +1,7 @@
 {
   "title": "Lawyer Oleksandr Kravchuk",
   "description": "Professional lawyer with experience in commercial, family, criminal, civil, and administrative cases. We also offer subscription-based legal services for businesses, institutions, organizations, and local government. We guarantee high-quality services and an individual approach to each client.",
-  "error": "Error occured",
+  "error": "Unknown error has occured",
   "error_404": "Page not found",
   "lawyer": "Lawyer",
   "oleksandr_kravchuk": "Oleksandr Kravchuk",
@@ -10,8 +10,21 @@
   "blog": "Blog",
   "contacts": "Contacts",
   "documents": "Sample documents",
+  "phone_title": "Phone",
   "phone": "+380685257555",
   "phone_formatted": "+38 (068) 525-75-55",
   "telegram": "khristiina_kravchuk",
-  "information": "Information"
+  "navigation": "Navigation",
+  "address_title": "Address",
+  "address": "Ukraine, Volyn region,\n Novovolynsk city, Hrushevskoho street, building 17",
+  "legal": "Legal disclaimer",
+  "work_schedule": "Work Schedule",
+  "mon-fri": "Mon-Fri",
+  "copyright": "© {year} Lawyer Oleksandr Kravchuk",
+  "main": {
+    "title": "Lawyer Oleksandr Kravchuk",
+    "description": "Consultation and introduction of economic, family, criminal, civil and administrative cases",
+    "address_short": "Ukraine, Novovolynsk city",
+    "get_consultation": "Get lawyer's consultation"
+  }
 }

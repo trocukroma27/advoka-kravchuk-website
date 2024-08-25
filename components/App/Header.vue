@@ -62,7 +62,7 @@ const links = computed(() => [
       <UHorizontalNavigation :links="links" class="hidden lg:flex" />
       <div class="flex gap-2">
         <UButton
-          icon="i-heroicons-phone-16-solid"
+          icon="i-fa-solid-phone-alt"
           color="primary"
           variant="link"
           :label="$t('phone_formatted')"
@@ -74,7 +74,7 @@ const links = computed(() => [
         <AppThemeButton />
         <div class="flex lg:hidden">
           <UButton
-            icon="i-heroicons-bars-3-20-solid"
+            icon="i-fa-solid-bars"
             color="gray"
             variant="ghost"
             aria-label="Menu"
@@ -92,7 +92,7 @@ const links = computed(() => [
               />
               <UVerticalNavigation :links="links" />
               <UButton
-                icon="i-heroicons-phone-16-solid"
+                icon="i-fa-solid-phone-alt"
                 color="primary"
                 variant="link"
                 :label="$t('phone_formatted')"
@@ -100,10 +100,11 @@ const links = computed(() => [
                 :trailing="false"
               />
               <div>
-                <p class="text-sm text-gray-500 dark:text-gray-400 font-light">
-                  <span class="font-semibold">Адреса:</span> Україна, Волинська
-                  область,<br />
-                  м. Нововолинськ, вулиця Грушевського, буд. 17
+                <p
+                  class="text-sm text-gray-500 dark:text-gray-400 font-light whitespace-pre-line"
+                >
+                  <span class="font-semibold">{{ $t("address_title") }}:</span>
+                  {{ $t("address") }}
                 </p>
                 <div class="flex mt-4">
                   <UButton
