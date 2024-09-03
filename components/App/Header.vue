@@ -54,7 +54,7 @@ const links = computed(() => [
     <UContainer class="flex items-center justify-between gap-5 h-full">
       <NuxtLink
         to="/"
-        class="flex flex-col flex-shrink-0 font-bold text-lg md:text-xl leading-6 text-primary-700 dark:text-primary-400 items-center"
+        class="flex flex-col flex-shrink-0 font-bold text-lg md:text-xl leading-6 text-primary items-center"
       >
         <span>{{ $t("lawyer") }}</span>
         <span class="text-sm md:text-base">{{ $t("oleksandr_kravchuk") }}</span>

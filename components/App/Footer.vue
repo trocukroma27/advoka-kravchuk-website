@@ -57,7 +57,7 @@ const links = computed(() => [
       </div>
       <div class="flex flex-col items-start basis-64 grow">
         <h4
-          class="w-full relative text-md md:text-lg after:block after:content-[''] after:h-[1px] after:w-full after:bg-gray-200 dark:after:bg-gray-800 after:absolute after:top-[31px] before:block before:content-[''] before:h-[2px] before:w-12 before:bg-primary-500 before:absolute before:top-[30px] before:z-10"
+          class="w-full relative text-base md:text-lg after:block after:content-[''] after:h-[1px] after:w-full after:bg-gray-200 dark:after:bg-gray-800 after:absolute after:top-[31px] before:block before:content-[''] before:h-[2px] before:w-12 before:bg-primary-500 before:absolute before:top-[30px] before:z-10"
         >
           {{ $t("navigation") }}
         </h4>
@@ -65,7 +65,7 @@ const links = computed(() => [
           <li
             v-for="(link, index) in links"
             :key="index"
-            class="flex gap-3 items-center text-sm md:text-md font-normal text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+            class="flex gap-3 items-center text-sm font-normal text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
           >
             <div class="bg-primary w-2 h-2 rounded-full" />
             <NuxtLink :to="link.to">{{ link.label }}</NuxtLink>
@@ -74,12 +74,12 @@ const links = computed(() => [
       </div>
       <div class="flex flex-col items-start basis-64 grow">
         <h4
-          class="w-full relative text-md md:text-lg after:block after:content-[''] after:h-[1px] after:w-full after:bg-gray-200 dark:after:bg-gray-800 after:absolute after:top-[31px] before:block before:content-[''] before:h-[2px] before:w-12 before:bg-primary-500 before:absolute before:top-[30px] before:z-10"
+          class="w-full relative text-base md:text-lg after:block after:content-[''] after:h-[1px] after:w-full after:bg-gray-200 dark:after:bg-gray-800 after:absolute after:top-[31px] before:block before:content-[''] before:h-[2px] before:w-12 before:bg-primary-500 before:absolute before:top-[30px] before:z-10"
         >
           {{ $t("contacts") }}
         </h4>
         <div
-          class="mt-6 flex flex-col gap-3 text-sm md:text-md font-light text-gray-700 dark:text-gray-400"
+          class="mt-6 flex flex-col gap-3 text-sm font-light text-gray-700 dark:text-gray-400"
         >
           <a
             :href="'tel:' + $t('phone')"

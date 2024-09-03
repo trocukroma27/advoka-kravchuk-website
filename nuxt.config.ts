@@ -8,8 +8,25 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxtjs/i18n",
     "@nuxt/eslint",
-    "@nuxtjs/mdc",
     "@nuxtjs/sitemap",
+    "@nuxt/content",
+    [
+      "nuxt-mail",
+      {
+        message: {
+          to: process.env.MAIL_TARGET,
+        },
+        smtp: {
+          host: process.env.MAIL_SMTP,
+          port: process.env.MAL_PORT,
+          secure: true,
+          auth: {
+            user: process.env.MAIL_USERNAME,
+            pass: process.env.MAIL_PASSWORD,
+          },
+        },
+      },
+    ],
   ],
   typescript: {
     typeCheck: true,
@@ -30,6 +47,10 @@ export default defineNuxtConfig({
         iso: "en-US",
       },
     ],
+  },
+  content: {
+    defaultLocale: "uk",
+    locales: ["uk", "en"],
   },
   colorMode: {
     preference: "system",
