@@ -22,6 +22,9 @@
   "mon-fri": "Mon-Fri",
   "copyright": "© {year} Lawyer Oleksandr Kravchuk",
   "more": "More",
+  "all_services": "All Services",
+  "order_services": "Order a lawyer's services",
+  "order_services_instruction": "To order services, call or send a request to the email address",
   "main": {
     "title": "Lawyer Oleksandr Kravchuk",
     "description": "Consultation and introduction of economic, family, criminal, civil and administrative cases",

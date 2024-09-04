@@ -19,9 +19,7 @@ const { data: practices } = await useAsyncData(`practices`, () =>
         class="py-16 bg-gray-100 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-70"
       >
         <UContainer class="max-w-2xl flex flex-col items-center gap-8">
-          <h1
-            class="text-2xl text-gray-800 dark:text-gray-200 md:text-3xl font-bold text-center"
-          >
+          <h1 class="text-2xl md:text-3xl font-bold text-center">
             {{ $t("main.title") }}
           </h1>
           <p
@@ -37,7 +35,6 @@ const { data: practices } = await useAsyncData(`practices`, () =>
           <UButton
             color="primary"
             variant="solid"
-            :ui="{ rounded: 'rounded-full' }"
             class="mt-4 md:mt-8 py-3 px-6 text-sm md:text-base"
             :to="localePath('/contacts')"
           >
@@ -47,7 +44,7 @@ const { data: practices } = await useAsyncData(`practices`, () =>
       </div>
     </section>
     <section>
-      <UContainer class="flex flex-col items-center gap-8 py-16">
+      <UContainer class="flex flex-col items-center gap-16 py-16">
         <div class="w-full flex gap-8 justify-around flex-wrap">
           <template v-for="(practice, index) in practices" :key="index">
             <div class="basis-72 grow max-w-96">
@@ -59,6 +56,37 @@ const { data: practices } = await useAsyncData(`practices`, () =>
               </ContentRenderer>
             </div>
           </template>
+        </div>
+        <div
+          class="flex flex-col md:flex-row flex-wrap items-center md:items-start gap-8 md:gap-12"
+        >
+          <div class="flex gap-4">
+            <div
+              class="flex items-center justify-center w-14 h-14 shrink-0 bg-primary-200/70 dark:bg-primary-200/20 rounded-full"
+            >
+              <UIcon
+                name="i-material-symbols-light-edit-calendar"
+                size="32"
+                class="text-primary"
+              />
+            </div>
+            <div class="max-w-96">
+              <h3 class="text-xl font-bold">{{ $t("order_services") }}</h3>
+              <p
+                class="mt-2 text-sm font-thin text-gray-700 dark:text-gray-300"
+              >
+                {{ $t("order_services_instruction") }}
+              </p>
+            </div>
+          </div>
+          <UButton
+            trailing-icon="i-fa6-solid-angle-right"
+            variant="outline"
+            size="md"
+            class="text-sm md:text-base px-6 py-4"
+            :to="localePath('/practices')"
+            >{{ $t("all_services") }}</UButton
+          >
         </div>
       </UContainer>
     </section>
