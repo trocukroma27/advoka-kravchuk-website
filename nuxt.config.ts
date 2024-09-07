@@ -28,6 +28,8 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  css: ["~/assets/scss/animations.scss"],
+  plugins: [{ src: "~/plugins/animate-on-scroll.ts", mode: "client" }],
   typescript: {
     typeCheck: true,
   },

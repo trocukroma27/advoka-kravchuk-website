@@ -4,14 +4,14 @@ import { PracticeCard } from "#components";
 const { locale } = useI18n();
 const localePath = useLocalePath();
 
-const { data: practices } = await useAsyncData(`practices`, () =>
+const { data: practices } = await useAsyncData("practices", () =>
   queryContent("/practices").where({ _locale: locale.value }).find(),
 );
 </script>
 
 <template>
-  <!-- Main section -->
   <div class="w-full">
+    <!-- Main section -->
     <section
       class="bg-[url('/images/main_bg.jpg')] bg-cover bg-no-repeat bg-center bg-opacity-10 w-full h-min"
     >
@@ -36,6 +36,7 @@ const { data: practices } = await useAsyncData(`practices`, () =>
             color="primary"
             variant="solid"
             class="mt-4 md:mt-8 py-3 px-6 text-sm md:text-base"
+            data-animation="fade-up"
             :to="localePath('/contacts')"
           >
             {{ $t("main.get_consultation") }}
@@ -43,11 +44,16 @@ const { data: practices } = await useAsyncData(`practices`, () =>
         </UContainer>
       </div>
     </section>
+    <!-- Practices section -->
     <section>
       <UContainer class="flex flex-col items-center gap-16 py-16">
         <div class="w-full flex gap-8 justify-around flex-wrap">
           <template v-for="(practice, index) in practices" :key="index">
-            <div class="basis-72 grow max-w-96">
+            <div
+              class="basis-72 grow max-w-96"
+              data-animation="fade-up"
+              :data-animation-delay="index * 300"
+            >
               <ContentRenderer :value="practice">
                 <ContentRendererMarkdown
                   :value="practice"
@@ -84,9 +90,11 @@ const { data: practices } = await useAsyncData(`practices`, () =>
             variant="outline"
             size="md"
             class="text-sm md:text-base px-6 py-4"
+            data-animation="fade-left"
             :to="localePath('/practices')"
-            >{{ $t("all_services") }}</UButton
           >
+            {{ $t("all_services") }}
+          </UButton>
         </div>
       </UContainer>
     </section>
