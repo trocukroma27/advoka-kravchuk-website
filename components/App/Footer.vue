@@ -32,7 +32,7 @@ const links = computed(() => [
 
 <template>
   <footer
-    class="py-8 md:py-12 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
+    class="py-8 md:py-12 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
   >
     <UContainer class="flex flex-wrap gap-12 md:gap-16">
       <div class="flex flex-col items-start justify-between basis-64 grow">
@@ -74,7 +74,7 @@ const links = computed(() => [
       </div>
       <div class="flex flex-col items-start basis-64 grow">
         <h4
-          class="w-full relative text-base md:text-lg after:block after:content-[''] after:h-[1px] after:w-full after:bg-gray-200 dark:after:bg-gray-800 after:absolute after:top-[31px] before:block before:content-[''] before:h-[2px] before:w-12 before:bg-primary-500 before:absolute before:top-[30px] before:z-10"
+          class="w-full relative text-base md:text-lg after:block after:content-[''] after:h-[1px] after:w-full after:bg-gray-200 dark:after:bg-gray-700 after:absolute after:top-[31px] before:block before:content-[''] before:h-[2px] before:w-12 before:bg-primary-500 before:absolute before:top-[30px] before:z-10"
         >
           {{ $t("contacts") }}
         </h4>

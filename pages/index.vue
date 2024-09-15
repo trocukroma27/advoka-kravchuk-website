@@ -13,24 +13,26 @@ const { data: practices } = await useAsyncData("practices", () =>
   <div class="w-full">
     <!-- Main section -->
     <section
-      class="bg-[url('/images/main_bg.jpg')] bg-cover bg-no-repeat bg-center bg-opacity-10 w-full h-min"
+      class="bg-[url('~/assets/images/main_bg.jpg')] bg-cover bg-no-repeat bg-center bg-opacity-10 w-full h-min"
     >
       <div
         class="py-16 bg-gray-100 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-70"
       >
         <UContainer class="max-w-2xl flex flex-col items-center gap-8">
-          <h1 class="text-2xl md:text-3xl font-bold text-center">
-            {{ $t("main.title") }}
+          <h1
+            class="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-gray-100"
+          >
+            {{ $t("main_page.title") }}
           </h1>
           <p
             class="text-center text-gray-700 dark:text-gray-300 font-light text-sm md:text-base"
           >
-            {{ $t("main.description") }}
+            {{ $t("main_page.description") }}
           </p>
           <p
             class="text-center text-gray-700 dark:text-gray-300 font-extralight italic text-xs md:text-sm"
           >
-            {{ $t("main.address_short") }}
+            {{ $t("main_page.address_short") }}
           </p>
           <UButton
             color="primary"
@@ -39,7 +41,7 @@ const { data: practices } = await useAsyncData("practices", () =>
             data-animation="fade-up"
             :to="localePath('/contacts')"
           >
-            {{ $t("main.get_consultation") }}
+            {{ $t("main_page.get_consultation") }}
           </UButton>
         </UContainer>
       </div>
@@ -77,7 +79,9 @@ const { data: practices } = await useAsyncData("practices", () =>
               />
             </div>
             <div class="max-w-96">
-              <h3 class="text-xl font-bold">{{ $t("order_services") }}</h3>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">
+                {{ $t("order_services") }}
+              </h3>
               <p
                 class="mt-2 text-sm font-thin text-gray-700 dark:text-gray-300"
               >

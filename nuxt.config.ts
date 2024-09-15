@@ -10,23 +10,6 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxtjs/sitemap",
     "@nuxt/content",
-    [
-      "nuxt-mail",
-      {
-        message: {
-          to: process.env.MAIL_TARGET,
-        },
-        smtp: {
-          host: process.env.MAIL_SMTP,
-          port: process.env.MAL_PORT,
-          secure: true,
-          auth: {
-            user: process.env.MAIL_USERNAME,
-            pass: process.env.MAIL_PASSWORD,
-          },
-        },
-      },
-    ],
   ],
   css: ["~/assets/scss/animations.scss"],
   plugins: [{ src: "~/plugins/animate-on-scroll.ts", mode: "client" }],
@@ -34,7 +17,6 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
   i18n: {
-    baseUrl: process.env.BASE_URL,
     defaultLocale: "uk",
     langDir: "lang",
     locales: [

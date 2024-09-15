@@ -21,7 +21,6 @@
     "@nuxtjs/i18n": "^8.3.3",
     "@nuxtjs/sitemap": "^6.0.0-beta.1",
     "nuxt": "^3.12.4",
-    "nuxt-mail": "^5.0.1",
     "vue": "latest"
   },
   "devDependencies": {

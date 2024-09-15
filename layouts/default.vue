@@ -8,7 +8,9 @@ const head = useLocaleHead({
 });
 
 const title = computed(() =>
-  t((route.meta.title as string | undefined) ?? "title"),
+  (route.meta.title as string | undefined)
+    ? t(route.meta.title as string) + " | " + t("title")
+    : t("title"),
 );
 
 const jsonLd = computed(() => {
@@ -48,6 +50,7 @@ useHead(() => ({
         <Meta property="og:site_name" :content="$t('title')" />
         <Meta property="og:description" :content="$t('description')" />
         <Meta property="og:type" content="website" />
+        <!-- TODO: Додати og:image -->
         <!-- TODO: Забрати цей мета тег після того як сайт буде готовий до публікації -->
         <Meta name="robots" content="noindex" />
         <template v-for="meta in head.meta" :key="meta.id">

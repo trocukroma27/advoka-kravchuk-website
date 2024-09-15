@@ -29,5 +29,15 @@ export default defineAppConfig({
         base: "border-gray-400 dark:border-gray-600",
       },
     },
+    breadcrumb: {
+      wrapper:
+        "px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-600 bg-opacity-70 dark:bg-opacity-70",
+    },
+    formGroup: {
+      error: "mt-1",
+      default: {
+        size: "md",
+      },
+    },
   },
 });

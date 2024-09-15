@@ -19,7 +19,7 @@ defineProps({
     </div>
     <div class="py-6 px-8">
       <h3
-        class="my-2 text-lg fond-medium duration-100 group-hover:text-primary"
+        class="my-2 text-lg fond-medium text-gray-900 dark:text-gray-100 duration-100 group-hover:text-primary"
       >
         <ContentSlot :use="$slots.title" unwrap="p" />
       </h3>

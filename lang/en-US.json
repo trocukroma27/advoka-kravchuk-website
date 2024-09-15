@@ -25,10 +25,25 @@
   "all_services": "All Services",
   "order_services": "Order a lawyer's services",
   "order_services_instruction": "To order services, call or send a request to the email address",
-  "main": {
+  "main_page": {
     "title": "Lawyer Oleksandr Kravchuk",
     "description": "Consultation and introduction of economic, family, criminal, civil and administrative cases",
     "address_short": "Ukraine, Novovolynsk city",
     "get_consultation": "Get lawyer's consultation"
+  },
+  "contacts_page": {
+    "contact_us": "Contact us",
+    "have_any_question": "Have Any Question?",
+    "contact_form_description": " If you have any questions, just fill in the contact form, and we will answer you shortly.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send_message": "Send Message",
+    "form_errors": {
+      "name": "Name field is required",
+      "email": "Email field is required",
+      "email_invalid": "Invalid email format",
+      "message": "Message must contain at least {number} characters"
+    }
   }
 }

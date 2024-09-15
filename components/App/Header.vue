@@ -49,7 +49,7 @@ const links = computed(() => [
 
 <template>
   <header
-    class="z-50 bg-gray-100 dark:bg-gray-900 h-[--header-height] sticky top-0 w-full border-b border-gray-200 dark:border-gray-800"
+    class="z-50 bg-gray-100 dark:bg-gray-900 h-[--header-height] sticky top-0 w-full border-b border-gray-200 dark:border-gray-700"
   >
     <UContainer class="flex items-center justify-between gap-5 h-full">
       <NuxtLink
