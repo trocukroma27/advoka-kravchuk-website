@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/content",
   ],
-  css: ["~/assets/scss/animations.scss"],
+  css: ["~/assets/scss/styles.scss", "~/assets/scss/animations.scss"],
   plugins: [{ src: "~/plugins/animate-on-scroll.ts", mode: "client" }],
   typescript: {
     typeCheck: true,

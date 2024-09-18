@@ -25,6 +25,9 @@
   "all_services": "All Services",
   "order_services": "Order a lawyer's services",
   "order_services_instruction": "To order services, call or send a request to the email address",
+  "order_services_long_instruction": "To order the services of the lawyer, call us or send us an e-mail. We also provide online legal advice by phone or email.",
+  "order_now": "Order now",
+  "lawyer_practices": "Lawyer practices",
   "main_page": {
     "title": "Lawyer Oleksandr Kravchuk",
     "description": "Consultation and introduction of economic, family, criminal, civil and administrative cases",

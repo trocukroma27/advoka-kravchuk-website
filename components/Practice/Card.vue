@@ -1,30 +1,36 @@
 <script lang="ts" setup>
-const localePath = useLocalePath();
-
 defineProps({
-  name: {
+  id: {
     type: String,
-    default: "index",
+    default: "",
+  },
+  title: {
+    type: String,
+    default: "",
+  },
+  image: {
+    type: String,
+    default: "",
   },
 });
 </script>
 
 <template>
-  <NuxtLink
-    class="block w-full border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 duration-300 group hover:-translate-y-2 hover:shadow-xl dark:shadow-[rgba(0,0,0,0.2)]"
-    :to="localePath(`/practices/${name}`)"
+  <NuxtLinkLocale
+    class="flex flex-col w-full h-full border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 duration-300 group hover:-translate-y-2 hover:shadow-xl dark:shadow-[rgba(0,0,0,0.2)]"
+    :to="`/practices/${id}`"
   >
     <div class="aspect-video">
-      <ContentSlot :use="$slots.image" unwrap="p" />
+      <img :src="image" class="w-full h-full object-cover" />
     </div>
-    <div class="py-6 px-8">
+    <div class="flex flex-col justify-between py-6 px-8 grow">
       <h3
         class="my-2 text-lg fond-medium text-gray-900 dark:text-gray-100 duration-100 group-hover:text-primary"
       >
-        <ContentSlot :use="$slots.title" unwrap="p" />
+        {{ title }}
       </h3>
       <div class="text-gray-700 dark:text-gray-300 font-thin text-sm">
-        <ContentSlot :use="$slots.description" unwrap="p" />
+        <ContentSlot :use="$slots.shortDescription" unwrap="p" />
       </div>
       <div
         class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700 text-primary flex items-center justify-between"
@@ -37,5 +43,5 @@ defineProps({
         </div>
       </div>
     </div>
-  </NuxtLink>
+  </NuxtLinkLocale>
 </template>

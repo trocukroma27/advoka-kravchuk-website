@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  strong, b {
+    font-weight: bold;
+  }
+}
+
+.content {
+  & > p:not(:first-child) {
+    @apply mt-4;
+  }
+  & ul {
+    @apply list-disc pl-4 my-4;
+    & li:not(:last-child) {
+      @apply mb-2;
+    }
+  }
+}

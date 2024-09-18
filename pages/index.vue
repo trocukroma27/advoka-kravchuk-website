@@ -5,7 +5,7 @@ const { locale } = useI18n();
 const localePath = useLocalePath();
 
 const { data: practices } = await useAsyncData("practices", () =>
-  queryContent("/practices").where({ _locale: locale.value }).find(),
+  queryContent("/practices").where({ _locale: locale.value }).limit(3).find(),
 );
 </script>
 
@@ -13,7 +13,7 @@ const { data: practices } = await useAsyncData("practices", () =>
   <div class="w-full">
     <!-- Main section -->
     <section
-      class="bg-[url('~/assets/images/main_bg.jpg')] bg-cover bg-no-repeat bg-center bg-opacity-10 w-full h-min"
+      class="bg-[url('/images/practices/main_bg.jpg')] bg-cover bg-no-repeat bg-center w-full h-min"
     >
       <div
         class="py-16 bg-gray-100 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-70"
@@ -49,7 +49,9 @@ const { data: practices } = await useAsyncData("practices", () =>
     <!-- Practices section -->
     <section>
       <UContainer class="flex flex-col items-center gap-16 py-16">
-        <div class="w-full flex gap-8 justify-around flex-wrap">
+        <div
+          class="w-full flex gap-8 justify-around align-items-baseline flex-wrap"
+        >
           <template v-for="(practice, index) in practices" :key="index">
             <div
               class="basis-72 grow max-w-96"
@@ -58,6 +60,7 @@ const { data: practices } = await useAsyncData("practices", () =>
             >
               <ContentRenderer :value="practice">
                 <ContentRendererMarkdown
+                  class="h-full"
                   :value="practice"
                   :components="{ practice: PracticeCard }"
                 />
