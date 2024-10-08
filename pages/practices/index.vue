@@ -26,7 +26,7 @@ const { data: practices } = await useAsyncData("practices", () =>
 <template>
   <div class="w-full">
     <section
-      class="bg-[url('/images/practices/contacts_bg.jpg')] bg-cover bg-no-repeat bg-center w-full h-min"
+      class="bg-[url('/images/practices_bg.jpg')] bg-cover bg-no-repeat bg-center w-full h-min"
     >
       <div
         class="py-16 bg-gray-100 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-70"

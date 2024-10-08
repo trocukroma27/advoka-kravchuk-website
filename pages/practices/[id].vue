@@ -13,6 +13,13 @@ const { data: practice } = await useAsyncData("practice", () =>
   queryContent("/practices").where({ _locale: locale.value, id }).findOne(),
 );
 
+const bgImageUrl = computed(() => {
+  if (practice.value?.image) {
+    return practice.value?.image;
+  }
+  return "/images/practice_bg.jpg";
+});
+
 const { data: otherPractices } = await useAsyncData("otherPractices", () =>
   queryContent("/practices")
     .where({ _locale: locale.value })
@@ -32,7 +39,7 @@ function filterOtherPractices(practices: ParsedContent[]): ParsedContent[] {
   <div v-if="practice" class="w-full">
     <section
       class="bg-cover bg-no-repeat bg-center w-full h-min"
-      :class="`bg-[url('${practice.image}')]`"
+      :style="`background-image: url('${bgImageUrl}');`"
     >
       <div
         class="py-24 bg-gray-100 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-70"
