@@ -16,7 +16,7 @@ const title = computed(() =>
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  url: `https://advokat-kravchuk.nuxt.dev`,
+  url: "https://advokat-kravchuk.nuxt.dev",
   name: "Адвокат Олександр Кравчук",
   alternateName: "Lawyer Oleksandr Kravchuk",
 };
@@ -24,7 +24,7 @@ useHead(() => ({
   script: [
     {
       type: "application/ld+json",
-      textContent: JSON.stringify(jsonLd),
+      children: JSON.stringify(jsonLd, null, ""),
     },
   ],
 }));
