@@ -13,7 +13,7 @@ const error = useError();
         </h1>
         <UDivider class="h-10 md:h-14" size="xs" orientation="vertical" />
         <h3 class="text-lg md:text-4xl text-primary">
-          {{ error.statusCode == 404 ? $t("error_404") : $t("error") }}
+          {{ error.statusCode == 404 ? $t("error_404") : $t("error_unknown") }}
         </h3>
       </UContainer>
     </NuxtLayout>

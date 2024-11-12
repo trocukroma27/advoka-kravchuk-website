@@ -37,7 +37,90 @@ const links = computed(() => [
     </section>
     <section>
       <UContainer class="py-16 flex flex-col md:flex-row gap-12">
-        <div class="basis-2/5">Контактна інформація</div>
+        <div
+          class="basis-2/5 flex flex-col gap-6 my-12 text-gray-700 dark:text-gray-400 text-sm sm:text-base"
+        >
+          <div class="flex gap-4 flex-nowrap">
+            <div class="size-12 flex items-center justify-center">
+              <UIcon
+                class="text-primary"
+                name="i-fa6-regular-envelope-open"
+                size="36"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <h2
+                class="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100"
+              >
+                {{ $t("contacts") }}
+              </h2>
+              <a
+                :href="'tel:' + $t('phone')"
+                class="hover:text-gray-900 dark:hover:text-gray-100"
+              >
+                <span class="font-semibold">{{ $t("phone_title") }}:</span>
+                {{ $t("phone_formatted") }}
+              </a>
+              <a
+                href="mailto:advokat287@ukr.net"
+                class="hover:text-gray-900 dark:hover:text-gray-100"
+              >
+                <span class="font-semibold">Email:</span>
+                advokat287@ukr.net
+              </a>
+              <a
+                :href="'https://t.me/' + $t('telegram')"
+                class="hover:text-gray-900 dark:hover:text-gray-100"
+              >
+                <span class="font-semibold">Telegram:</span>
+                @{{ $t("telegram") }}
+              </a>
+            </div>
+          </div>
+          <div class="flex gap-4 flex-nowrap">
+            <div class="size-12 flex items-center justify-center">
+              <UIcon
+                class="text-primary"
+                name="i-fa6-regular-calendar-check"
+                size="40"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <h2
+                class="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100"
+              >
+                {{ $t("work_schedule") }}
+              </h2>
+              <p>
+                <span class="font-semibold">{{ $t("mon-fri") }}:</span>
+                9:00-17:00
+              </p>
+              <p>
+                <span class="font-semibold">{{ $t("sat-sun") }}:</span>
+                {{ $t("day-off") }}
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4 flex-nowrap">
+            <div class="size-12 flex items-center justify-center">
+              <UIcon
+                class="text-primary"
+                name="i-heroicons-map-pin"
+                size="42"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <h2
+                class="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100"
+              >
+                {{ $t("address_title") }}
+              </h2>
+              <p>
+                {{ $t("address") }}
+              </p>
+            </div>
+          </div>
+        </div>
         <AppContactForm class="basis-3/5" />
       </UContainer>
     </section>

@@ -71,4 +71,5 @@ export default defineNuxtConfig({
       },
     ],
   },
+  ignorePrefix: "_",
 });

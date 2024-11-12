@@ -29,21 +29,21 @@ const links = computed(() => [
     to: localePath("/practices"),
     click,
   },
-  {
-    label: t("blog"),
-    to: localePath("/blog"),
-    click,
-  },
+  // {
+  //   label: t("blog"),
+  //   to: localePath("/blog"),
+  //   click,
+  // },
   {
     label: t("contacts"),
     to: localePath("/contacts"),
     click,
   },
-  {
-    label: t("documents"),
-    to: localePath("/documents"),
-    click,
-  },
+  // {
+  //   label: t("documents"),
+  //   to: localePath("/documents"),
+  //   click,
+  // },
 ]);
 </script>
 

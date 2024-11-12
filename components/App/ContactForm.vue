@@ -1,16 +1,17 @@
 <script lang="ts" setup>
 import type { FormError, FormSubmitEvent } from "#ui/types";
-import type { ContactForm } from "~/types";
+import type { ContactFormData } from "~/types";
 
 const { t } = useI18n();
+const toast = useToast();
 
-const state: ContactForm = reactive({
+const state: ContactFormData = reactive({
   name: "",
   email: "",
   message: "",
 });
 
-const validate = (state: ContactForm): FormError[] => {
+const validate = (state: ContactFormData): FormError[] => {
   const errors = [];
   if (!state.name.trim())
     errors.push({ path: "name", message: t("contacts_page.form_errors.name") });
@@ -32,9 +33,24 @@ const validate = (state: ContactForm): FormError[] => {
   return errors;
 };
 
-async function onSubmit(event: FormSubmitEvent<ContactForm>) {
-  // Do something with data
-  console.log(event.data);
+async function onSubmit(event: FormSubmitEvent<ContactFormData>) {
+  const response = await $fetch("/api/send-email", {
+    method: "POST",
+    body: JSON.stringify(event.data),
+  });
+
+  if (response.success) {
+    toast.add({
+      title: t("sending_form_succes"),
+      color: "green",
+    });
+  } else {
+    toast.add({
+      title: t("error"),
+      description: t("sending_form_error"),
+      color: "red",
+    });
+  }
 }
 </script>
 

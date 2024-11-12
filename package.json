@@ -20,11 +20,13 @@
     "@nuxthub/core": "^0.7.1",
     "@nuxtjs/i18n": "^8.3.3",
     "@nuxtjs/sitemap": "^6.0.0-beta.1",
+    "nodemailer": "^6.9.16",
     "nuxt": "^3.12.4",
     "vue": "latest"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.5.1",
+    "@types/nodemailer": "^6.4.16",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",

@@ -13,20 +13,18 @@ const title = computed(() =>
     : t("title"),
 );
 
-const jsonLd = computed(() => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    url: `https://advokat-kravchuk.nuxt.dev`,
-    name: "Адвокат Олександр Кравчук",
-    alternateName: "Lawyer Oleksandr Kravchuk",
-  };
-});
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  url: `https://advokat-kravchuk.nuxt.dev`,
+  name: "Адвокат Олександр Кравчук",
+  alternateName: "Lawyer Oleksandr Kravchuk",
+};
 useHead(() => ({
   script: [
     {
-      type: "application/ld-json",
-      textContent: JSON.stringify(jsonLd.value),
+      type: "application/ld+json",
+      textContent: JSON.stringify(jsonLd),
     },
   ],
 }));
@@ -51,8 +49,6 @@ useHead(() => ({
         <Meta property="og:description" :content="$t('description')" />
         <Meta property="og:type" content="website" />
         <!-- TODO: Додати og:image -->
-        <!-- TODO: Забрати цей мета тег після того як сайт буде готовий до публікації -->
-        <Meta name="robots" content="noindex" />
         <template v-for="meta in head.meta" :key="meta.id">
           <Meta
             :id="meta.id"

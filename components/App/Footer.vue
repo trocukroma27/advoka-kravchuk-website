@@ -11,22 +11,22 @@ const links = computed(() => [
     label: t("practices"),
     to: localePath("/practices"),
   },
-  {
-    label: t("blog"),
-    to: localePath("/blog"),
-  },
+  // {
+  //   label: t("blog"),
+  //   to: localePath("/blog"),
+  // },
   {
     label: t("contacts"),
     to: localePath("/contacts"),
   },
-  {
-    label: t("documents"),
-    to: localePath("/documents"),
-  },
-  {
-    label: t("legal"),
-    to: localePath("/legal"),
-  },
+  // {
+  //   label: t("documents"),
+  //   to: localePath("/documents"),
+  // },
+  // {
+  //   label: t("legal"),
+  //   to: localePath("/legal"),
+  // },
 ]);
 </script>
 
