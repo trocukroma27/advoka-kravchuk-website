@@ -16,6 +16,11 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
+  },
   i18n: {
     defaultLocale: "uk",
     langDir: "lang",
