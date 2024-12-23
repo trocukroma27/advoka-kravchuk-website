@@ -20,6 +20,7 @@ const jsonLd = {
   name: "Адвокат Олександр Кравчук",
   alternateName: "Lawyer Oleksandr Kravchuk",
 };
+
 useHead(() => ({
   script: [
     {

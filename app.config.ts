@@ -26,7 +26,7 @@ export default defineAppConfig({
     },
     divider: {
       border: {
-        base: "border-gray-400 dark:border-gray-600",
+        base: "border-gray-200 dark:border-gray-700",
       },
     },
     breadcrumb: {

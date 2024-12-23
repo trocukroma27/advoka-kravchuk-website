@@ -41,11 +41,11 @@ const links = computed(() => [
           class="basis-2/5 flex flex-col gap-6 my-12 text-gray-700 dark:text-gray-400 text-sm sm:text-base"
         >
           <div class="flex gap-4 flex-nowrap">
-            <div class="size-12 flex items-center justify-center">
+            <div class="size-12 min-w-12 flex items-center justify-center">
               <UIcon
                 class="text-primary"
                 name="i-fa6-regular-envelope-open"
-                size="36"
+                size="34"
               />
             </div>
             <div class="flex flex-col gap-2">
@@ -77,12 +77,13 @@ const links = computed(() => [
               </a>
             </div>
           </div>
+          <UDivider />
           <div class="flex gap-4 flex-nowrap">
-            <div class="size-12 flex items-center justify-center">
+            <div class="size-12 min-w-12 flex items-center justify-center">
               <UIcon
                 class="text-primary"
                 name="i-fa6-regular-calendar-check"
-                size="40"
+                size="38"
               />
             </div>
             <div class="flex flex-col gap-2">
@@ -101,12 +102,13 @@ const links = computed(() => [
               </p>
             </div>
           </div>
+          <UDivider />
           <div class="flex gap-4 flex-nowrap">
-            <div class="size-12 flex items-center justify-center">
+            <div class="size-12 min-w-12 flex items-center justify-center">
               <UIcon
                 class="text-primary"
                 name="i-heroicons-map-pin"
-                size="42"
+                size="40"
               />
             </div>
             <div class="flex flex-col gap-2">
